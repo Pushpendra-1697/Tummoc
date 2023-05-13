@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { backend_url } from './BackendURL';
 import { Navigate, useNavigate } from 'react-router-dom'
+import { Box, Heading, Img } from '@chakra-ui/react';
 
 
 const Home = () => {
@@ -21,14 +22,17 @@ const Home = () => {
     }
   };
 
-  if (localStorage.getItem('token') === null ) {
+  if (localStorage.getItem('token') === null) {
     return <Navigate to="/login" />
   }
 
   getData();
 
   return (
-    <div>Home</div>
+    <Box textAlign={"center"} display="flex" justifyContent={"center"} alignItems="center" flexDirection={"column"}>
+      <Heading mb="10px">Welcome to Tummoc App</Heading>
+      <Img height={"400px"} w="500px" src='./logo.png' alt='logo profile' />
+    </Box>
   );
 }
 

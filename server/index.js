@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000; //defined port 8080 (default 3000) exclud
 const { userRouter } = require("./Routes/users.route");
 const { homeRouter } = require("./Routes/home.route");
 const { validate } = require("./Middleware/validate.middleware");
+const { fileRouter } = require("./Routes/fs.route");
 
 //Inbuilt middlewares;
 app.use(express.text());
@@ -24,9 +25,8 @@ app.get("/", async (req, res) => {
 
 //Fixed starting end points for making nested dynamic route;
 app.use('/users', userRouter);
-// custom middleware
-app.use(validate);
-app.use('/home', homeRouter);
+app.use('/home', validate, homeRouter); // use custom middleware
+app.use('/files', fileRouter);
 
 //server code for start or live my server at defined port;
 httpServer.listen(PORT, async () => {
