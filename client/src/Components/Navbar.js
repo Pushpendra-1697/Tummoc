@@ -41,6 +41,7 @@ const Navbar = () => {
                     <Link to="/"> <Image className='icon' w={"10px"} src="./logo.png" alt='logo' /> </Link>
 
                     <Text display={["none", "none", "block"]}><Link className='icon' to="/">Home</Link></Text>
+                    <Text><Link className='icon' to="/overview">Overview</Link></Text>
 
                     <Flex alignItems={'center'}>
                         <Stack direction={'row'} spacing={7}>
