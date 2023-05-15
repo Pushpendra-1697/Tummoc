@@ -8,8 +8,8 @@ This application for token-based authentication, O-auth, event loop concept with
 
 
 
-# Backend Cyclic Deployed Link:
-
+# Backend Render Deployed Link:
+https://tummoc-64iw.onrender.com/
 
 
 # Tech Stack :
