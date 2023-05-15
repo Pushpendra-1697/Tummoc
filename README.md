@@ -5,7 +5,7 @@
 This application for token-based authentication, O-auth, event loop concept with FS Module and use of aggregation & populate pipeline.
 
 # Frontend Verecel Deployed Link :
-https://tummoc-seven.vercel.app
+https://tummoc-seven.vercel.app/
 
 
 # Backend Render Deployed Link:
