@@ -2,6 +2,7 @@ import { Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from '@chakra-u
 import React from 'react';
 
 const UserCard = ({ data }) => {
+    console.log(data)
     return (
         <TableContainer mt={["15%", "15%", "0%"]}>
             <Table size='sm' variant={"striped"}>

@@ -42,7 +42,7 @@ const Overview = () => {
         } catch (err) {
             console.log(err)
         }
-
+        getData();
         setCityDetails({ name: '' });
     };
 
