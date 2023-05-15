@@ -18,7 +18,6 @@ overviewRouter.post('/city', async (req, res) => {
 
 // end point: /overview/get ---> To combine data pulling using aggregation and populate;
 
-
 // 1: Aggregating the number of locations created by each user
 overviewRouter.get('/noOfLocation', async (req, res) => {
     try {
@@ -74,10 +73,10 @@ overviewRouter.get('/mostPoularLocation', async (req, res) => {
 
 // 3: Retrieving all locations and their associated users 
 overviewRouter.get('/allLocations', async (req, res) => {
-    try{
+    try {
         let data = await CityModel.find().populate('userId');
         res.status(200).send({ msg: `Successfully get all locations and their associated users`, data })
-    }catch (err) {
+    } catch (err) {
         res.send({ status: "Error", msg: err.message })
     }
 });
